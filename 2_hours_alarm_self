@@ -1,0 +1,17 @@
+import webbrowser
+import datetime
+import time
+
+format = "%H:%M:%S"
+current_time = datetime.datetime.now().strftime(format)
+start_time = str(datetime.time(9, 0, 0))
+end_time = str(datetime.time(16, 59, 59))
+print('program started at:', current_time)
+
+for x in range(3):
+    if current_time > start_time and current_time < end_time:
+        webbrowser.open('https://www.google.com/')
+        time.sleep(60*60*2)
+    else:
+        print('nope')
+        break
